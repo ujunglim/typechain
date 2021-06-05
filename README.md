@@ -31,3 +31,9 @@ npm i -D @types/node typescript ts-node
 ```
 
 Interface is a way of declaring and using a certain object pattern as a data type
+
+Calculate hash of block
+
+```
+npm install crypto-js
+```

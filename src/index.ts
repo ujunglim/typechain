@@ -1,3 +1,5 @@
+import *as CryptoJS from "crypto-js";
+
 // block structure
 class Block {
   public index: number;
@@ -5,6 +7,13 @@ class Block {
   public previousHash: string;
   public data: string;
   public timestamp: number;
+
+  static calculateBlockHash = (
+    index: number,
+    previousHash: string,
+    data: string,
+    timestamp: number
+  ):string => CryptoJS.SHA256(index + previousHash + data + timestamp).toString();
 
   constructor(
     index: number,
@@ -25,8 +34,12 @@ class Block {
 const genesisBlock:Block = new Block(0, "sfsfsd", "", "Hello", 123456);
 
 // create blockchain
-let blockchain:[Block] = [genesisBlock];
+let blockchain:Block[] = [genesisBlock];
 
-console.log(blockchain);
+// get length of blockchain, return array of Block
+const getBlockchain = ():Block[] => blockchain;
+// return latest block in blockchain
+const getLatestBlock = ():Block => blockchain[blockchain.length - 1];
 
+const getNewTimeStamp = ():number => Math.round(new Date().getTime() / 1000);
 export {};

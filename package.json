@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ujunglim/typechain#readme",
   "dependencies": {
+    "crypto-js": "^4.0.0",
     "tsc-watch": "^4.4.0"
   },
   "devDependencies": {
