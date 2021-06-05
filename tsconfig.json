@@ -1,0 +1,12 @@
+// tell how typscript convert to js and some options
+// this is to enable normally use node.js and import, export many things
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2015",
+    "sourceMap": true
+  },
+  // tell which files are need to be converted
+  "include": ["index.ts"],
+  "exclude": ["node_modules"]
+}
