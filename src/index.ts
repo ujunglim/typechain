@@ -96,7 +96,7 @@ const isBlockValid = (candidateBlock:Block, previousBlock:Block):boolean => {
 
 // add block to blockchain
 const addBlock = (candidateBlock:Block):void => {
-  if(isBlockValid(candidateBlock, getLatestBlock()) {
+  if(isBlockValid(candidateBlock, getLatestBlock())) {
     blockchain.push(candidateBlock);
   }
 }
